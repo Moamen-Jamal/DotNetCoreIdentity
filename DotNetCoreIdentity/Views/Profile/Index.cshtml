@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Profile";
+}
+<h1>Profile</h1>
+<p><strong>Email:</strong> @ViewBag.Email</p>
+
+<h4>Roles</h4>
+<ul>
+@foreach (var r in (IEnumerable<string>)ViewBag.Roles) {
+    <li>@r</li>
+}
+</ul>
+
+<h4>Claims</h4>
+<ul>
+@foreach (var c in (IEnumerable<string>)ViewBag.Claims) {
+    <li>@c</li>
+}
+</ul>
+
+<h4>Two-Factor Authentication</h4>
+<p>Enabled: <strong>@(ViewBag.TwoFactorEnabled ? "Yes" : "No")</strong></p>
+<form asp-action="Enable2FA" method="post" style="display:inline">
+    <button type="submit" class="btn btn-sm btn-success">Enable 2FA</button>
+    </form>
+<form asp-action="Disable2FA" method="post" style="display:inline">
+    <button type="submit" class="btn btn-sm btn-danger">Disable 2FA</button>
+</form>
+
+
