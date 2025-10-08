@@ -1,7 +1,7 @@
 ## ASP.NET Core Identity (NET 8) – MVC + JWT Demo
 
 ### Overview
-Custom MVC implementation of ASP.NET Core Identity on .NET 8 using JWT (no Default Identity UI). Includes:
+Custom MVC implementation of ASP.NET Core Identity on .NET 8 using JWT. Includes:
 - User Registration and Login (JWT issuance)
 - Email Confirmation (console-based demo sender)
 - Roles and Claims (with seeding)
